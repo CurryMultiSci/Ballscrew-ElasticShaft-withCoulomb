@@ -1,4 +1,4 @@
-# ScrewShaft as an Elastic body & Coulomb Friction
+# Screw Shaft as an Elastic body & Coulomb Friction
 
 The theme, which will be completed in about six months, combines NSK's knowledge with threaded shaft elasticity to solve the static force balance, including friction (Coulomb friction only).
 

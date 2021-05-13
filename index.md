@@ -2,13 +2,12 @@
 
 The theme, which will be completed in about six months, combines NSK's knowledge with threaded shaft elasticity to solve the static force balance, including friction (Coulomb friction only).
 
-## Containts
+# Containts
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=4 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [Containts](#containts)
 - [1. Discretized representation of beam elements](#1-discretized-representation-of-beam-elements)
   - [1.1. Representation using quaternions](#11-representation-using-quaternions)
     - [1.1.1. Why quaternions?](#111-why-quaternions)

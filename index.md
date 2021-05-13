@@ -6,6 +6,40 @@ The theme, which will be completed in about six months, combines NSK's knowledge
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=4 orderedList=false} -->
 
+<!-- code_chunk_output -->
+
+- [Containts](#containts)
+- [1. Discretized representation of beam elements](#1-discretized-representation-of-beam-elements)
+  - [1.1. Representation using quaternions](#11-representation-using-quaternions)
+    - [1.1.1. Why quaternions?](#111-why-quaternions)
+    - [1.1.2. Previous research](#112-previous-research)
+  - [1.2. How to get coordinates in inertial coordinate system](#12-how-to-get-coordinates-in-inertial-coordinate-system)
+  - [1.3. Testing the created model](#13-testing-the-created-model)
+    - [1.3.1 Comparison with Eulerian coordinates](#131-comparison-with-eulerian-coordinates)
+    - [1.3.2. Representation of a beam in arbitrary coordinates](#132-representation-of-a-beam-in-arbitrary-coordinates)
+- [2. Discretized representation of a Screw Shaft](#2-discretized-representation-of-a-screw-shaft)
+  - [2.1. Not only the coordinates of the nodes, but also the profiles along the way](#21-not-only-the-coordinates-of-the-nodes-but-also-the-profiles-along-the-way)
+  - [2.2. Mathematical representation of a spiral around a stretched and bent beam](#22-mathematical-representation-of-a-spiral-around-a-stretched-and-bent-beam)
+  - [2.3. Creating an inverse function algorithm](#23-creating-an-inverse-function-algorithm)
+  - [2.4. Testing the created model](#24-testing-the-created-model)
+    - [2.4.1. Checking the accuracy of the inverse function](#241-checking-the-accuracy-of-the-inverse-function)
+    - [2.4.2. Is the NSK model correct in the first place? (Confirmation of the Depth of contacting)](#242-is-the-nsk-model-correct-in-the-first-place-confirmation-of-the-depth-of-contacting)
+    - [2.4.3. Is the new model correct? (Confirmation of the Depth of contacting)](#243-is-the-new-model-correct-confirmation-of-the-depth-of-contacting)
+- [3. The force acting between the ball and the screw shaft including Coulomb friction (in the case of only one ball)](#3-the-force-acting-between-the-ball-and-the-screw-shaft-including-coulomb-friction-in-the-case-of-only-one-ball)
+  - [3.1. What kind of balance is established in the steady state of Coulomb friction?](#31-what-kind-of-balance-is-established-in-the-steady-state-of-coulomb-friction)
+  - [3.2. Formulation of nonlinear simultaneous equations](#32-formulation-of-nonlinear-simultaneous-equations)
+- [4. Balance of forces when the screw shaft is treated as an elastic body](#4-balance-of-forces-when-the-screw-shaft-is-treated-as-an-elastic-body)
+  - [4.1. Modeling of variables in a program](#41-modeling-of-variables-in-a-program)
+    - [4.1.1. Express the discretization of the screw axis in terms of variables](#411-express-the-discretization-of-the-screw-axis-in-terms-of-variables)
+    - [4.1.2. Creating a test case](#412-creating-a-test-case)
+  - [4.2. No Coulomb friction (conventional model)](#42-no-coulomb-friction-conventional-model)
+    - [4.2.1. Formulation of nonlinear simultaneous equations](#421-formulation-of-nonlinear-simultaneous-equations)
+    - [4.2.2. Comparison with Bo-Lin model (if possible)](#422-comparison-with-bo-lin-model-if-possible)
+  - [4.3. With Coulomb friction](#43-with-coulomb-friction)
+    - [4.3.1. Formulation of nonlinear simultaneous equations](#431-formulation-of-nonlinear-simultaneous-equations)
+
+<!-- /code_chunk_output -->
+
 
 ## 1. Discretized representation of beam elements
 Improving Freschenko's Model Represented by Euler Angles.
@@ -36,8 +70,8 @@ Place the beam element at an arbitrary position on the inertial coordinate syste
 ## 2. Discretized representation of a Screw Shaft
   
 
-### 2.1. Not only the nodes, but also the profiles along the way
-In this case, not only the nodes at both ends, but also the profiles in the middle are important. In this case, not only the nodes at both ends but also the profiles in the middle are important, because they must be continuous in dynamic analysis. In addition, since the NSK algorithm does not treat any variable (such as the spiral phase angle) as a constant, there is a problem that the nodes cannot be determined in the first place.
+### 2.1. Not only the coordinates of the nodes, but also the profiles along the way
+In this case, not only the nodes at both ends but also the center profile is important. There are two reasons for this. One is that the dynamic analysis needs to be continuous, so not only the coordinates of the nodes at both ends, but also the center profile is important. The other reason is that the NSK algorithm does not treat all variables (such as the spiral phase angle) as constants, so it is not possible to locate the nodes in the first place.
 
 
 ### 2.2. Mathematical representation of a spiral around a stretched and bent beam

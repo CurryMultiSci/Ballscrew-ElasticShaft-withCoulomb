@@ -2,6 +2,9 @@
 
 The theme, which will be completed in about six months, combines NSK's knowledge with threaded shaft elasticity to solve the static force balance, including friction (Coulomb friction only).
 
+! [0_intro] ("0_intro.svg")
+
+
 # Containts
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=4 orderedList=false} -->

@@ -43,7 +43,7 @@ The theme, which will be completed in about six months, combines NSK's knowledge
 <!-- /code_chunk_output -->
 
 
-## 1. 1. Discretize of beam elements
+## 1. Discretize of beam elements
 Improving Freschenko's Model Represented by Euler Angles.
 
 

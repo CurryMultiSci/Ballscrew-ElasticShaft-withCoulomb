@@ -31,7 +31,7 @@ import numpy as np
 Lolić, Damjan, Dejan Zupan, and Miha Brojan. "A consistent strain-based beam element with quaternion representation of rotations." Computational Mechanics (2020): 1-16.
 
 
-![image.png](attachment:2b8a1502-0427-4c30-b202-ea31c92e0f44.png)
+![image.png](1_1.png)
 
 
 ```python

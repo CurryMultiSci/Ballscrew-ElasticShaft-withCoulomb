@@ -43,7 +43,7 @@ The theme, which will be completed in about six months, combines NSK's knowledge
 <!-- /code_chunk_output -->
 
 
-## 1. Discretized representation of beam elements
+## 1. 1. Discretize of beam elements
 Improving Freschenko's Model Represented by Euler Angles.
 
 
@@ -69,7 +69,7 @@ Comparison with previous model.
 Place the beam element at an arbitrary position on the inertial coordinate system and check if the calculation does not go wrong.
 
 
-## 2. Discretized representation of a Screw Shaft
+## 2. Discretize of a Screw Shaft
   
 
 ### 2.1. Not only the coordinates of the nodes, but also the profiles along the way

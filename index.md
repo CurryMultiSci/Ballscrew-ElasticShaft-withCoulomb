@@ -46,7 +46,7 @@ The theme, which will be completed in about six months, combines NSK's knowledge
 ## 1. Discretize of beam elements
 Improving Freschenko's Model Represented by Euler Angles.
 
-[1_Discretize_of_beam_elements](1_Discretize_of_beam_elements/index.md)
+[Click here](1_Discretize_of_beam_elements/index.md) for more info.
 
 ### 1.1. Representation using quaternions
 Since NSK uses quaternions to handle posture, we will model the quaternion representation in this program as well. Although there is an idea to convert Euler angles and quaternions for each calculation, we will use the direct quaternion method this time because it seems to be computationally expensive and there are already previous studies.

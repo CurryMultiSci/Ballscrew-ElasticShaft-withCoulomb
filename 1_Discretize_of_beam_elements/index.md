@@ -1,4 +1,4 @@
-## 1. 1. Discretize of beam elements
+## 1. Discretize of beam elements
 Improving Timoshenko's Model Represented by Euler Angles.
 
 
@@ -17,7 +17,7 @@ Light computational cost. Gimbal lock does not occur.
 
 ```python
 import numpy as np
-
+# from numpy import quaternion
 
 ```
 
@@ -28,10 +28,21 @@ import numpy as np
 ```
 
 #### 1.1.2. Previous research
-Lolić, Damjan, Dejan Zupan, and Miha Brojan. "A consistent strain-based beam element with quaternion representation of rotations." Computational Mechanics (2020): 1-16.
 
+Two types of modeling of beams by quaternions have been presented by the same laboratory.
 
-![image.png](1_1.png)
+|Kinematically Exact Beam Finite Elements Based on Quaternion Algebra (2014)|A consistent strain-based beam element with quaternion representation of rotations (2020)|
+|---|---|
+|![1‗2014](1_2014.png)|![1_2020](1_2020.png)|
+|Eva Zupan, Miran Saje, **Dejan Zupan**|Damjan Loli, **Dejan Zupan**, Miha Brojan|
+|University of Ljubljana|University of Ljubljana|
+|Simple|Complex|
+|displacement-based|strain-based|
+|12 DOFs per element|26 DOFs per element|
+|**to small shear deformations**|to larger shear deformations|
+
+In order to deal with the deformation of the ballscrew this time, we do not need to consider "larger shear deformations", so I will deal with the **2014 model**.
+
 
 
 ```python

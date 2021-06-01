@@ -106,8 +106,6 @@ Similar to the above method, we will now verify the model with a stretched and b
 ## 3. The force acting between the ball and the screw shaft including Coulomb friction (in the case of only one ball)
 With the current progress of NSK, friction can only be taken into account in dynamic analysis, so static load balancing cannot be obtained and is not suitable to be combined with the current beam model. In addition, users in the company have complained about the calculation speed and convergence judgment. Therefore, the first step is to formulate the balance including the Coulomb friction.
 
-![3-1](/3_Friction_between_ball_and_spiral/Picture3.svg)
-
 ### 3.1. What kind of balance is established in the steady state of Coulomb friction?
 When the ball is in a steady state, the force and torque of the ball should be zero (strictly speaking, there are centrifugal force and gyroscopic moment, but their effects are small and should be ignored), but it is very difficult to find the force balance because of the complexity of the spiral shape. By looking at the state of each contact point in the dynamic analysis in detail, we can understand what is happening.
 

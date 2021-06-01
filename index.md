@@ -46,6 +46,8 @@ The theme, which will be completed in about six months, combines NSK's knowledge
 ## 1. Discretize of beam elements
 Improving Timoshenko's Model Represented by Euler Angles.
 
+![1-1](/1_Discretize_of_beam_elements/1_2014.png)
+
 [Click here](1_Discretize_of_beam_elements/index.md) for more info.
 
 ### 1.1. Representation using quaternions

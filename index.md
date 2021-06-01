@@ -72,7 +72,7 @@ Comparison with previous model.
 Place the beam element at an arbitrary position on the inertial coordinate system and check if the calculation does not go wrong.
 
 
-## 2. Discretize of a Screw Shaft
+## 2. Discretize of Screw Shaft
   
 ![Image2](/2_Discretize_of_Screw_Shaft/Picture2.svg)
 

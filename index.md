@@ -72,6 +72,8 @@ Place the beam element at an arbitrary position on the inertial coordinate syste
 
 ## 2. Discretize of a Screw Shaft
   
+![Image2](/2_Discretize_of_Screw_Shaft/Picture2.svg)
+
 
 ### 2.1. Not only the coordinates of the nodes, but also the profiles along the way
 In this case, not only the nodes at both ends but also the center profile is important. There are two reasons for this. One is that the dynamic analysis needs to be continuous, so not only the coordinates of the nodes at both ends, but also the center profile is important. The other reason is that the NSK algorithm does not treat all variables (such as the spiral phase angle) as constants, so it is not possible to locate the nodes in the first place.

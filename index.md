@@ -2,53 +2,21 @@
 
 The theme, which will be completed in about six months, combines NSK's knowledge with threaded shaft elasticity to solve the static force balance, including friction (Coulomb friction only).
 
-![intro Image 0](/0_intro/overview.svg)
+![intro Image 0](/_0_intro/overview.svg)
 
 
 # Containts
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=4 orderedList=false} -->
 
-<!-- code_chunk_output -->
-
-- [1. Discretized representation of beam elements](#1-discretized-representation-of-beam-elements)
-  - [1.1. Representation using quaternions](#11-representation-using-quaternions)
-    - [1.1.1. Why quaternions?](#111-why-quaternions)
-    - [1.1.2. Previous research](#112-previous-research)
-  - [1.2. How to get coordinates in inertial coordinate system](#12-how-to-get-coordinates-in-inertial-coordinate-system)
-  - [1.3. Testing the created model](#13-testing-the-created-model)
-    - [1.3.1 Comparison with Eulerian coordinates](#131-comparison-with-eulerian-coordinates)
-    - [1.3.2. Representation of a beam in arbitrary coordinates](#132-representation-of-a-beam-in-arbitrary-coordinates)
-- [2. Discretized representation of a Screw Shaft](#2-discretized-representation-of-a-screw-shaft)
-  - [2.1. Not only the coordinates of the nodes, but also the profiles along the way](#21-not-only-the-coordinates-of-the-nodes-but-also-the-profiles-along-the-way)
-  - [2.2. Mathematical representation of a spiral around a stretched and bent beam](#22-mathematical-representation-of-a-spiral-around-a-stretched-and-bent-beam)
-  - [2.3. Creating an inverse function algorithm](#23-creating-an-inverse-function-algorithm)
-  - [2.4. Testing the created model](#24-testing-the-created-model)
-    - [2.4.1. Checking the accuracy of the inverse function](#241-checking-the-accuracy-of-the-inverse-function)
-    - [2.4.2. Is the NSK model correct in the first place? (Confirmation of the Depth of contacting)](#242-is-the-nsk-model-correct-in-the-first-place-confirmation-of-the-depth-of-contacting)
-    - [2.4.3. Is the new model correct? (Confirmation of the Depth of contacting)](#243-is-the-new-model-correct-confirmation-of-the-depth-of-contacting)
-- [3. The force acting between the ball and the screw shaft including Coulomb friction (in the case of only one ball)](#3-the-force-acting-between-the-ball-and-the-screw-shaft-including-coulomb-friction-in-the-case-of-only-one-ball)
-  - [3.1. What kind of balance is established in the steady state of Coulomb friction?](#31-what-kind-of-balance-is-established-in-the-steady-state-of-coulomb-friction)
-  - [3.2. Formulation of nonlinear simultaneous equations](#32-formulation-of-nonlinear-simultaneous-equations)
-- [4. Balance of forces when the screw shaft is treated as an elastic body](#4-balance-of-forces-when-the-screw-shaft-is-treated-as-an-elastic-body)
-  - [4.1. Modeling of variables in a program](#41-modeling-of-variables-in-a-program)
-    - [4.1.1. Express the discretization of the screw axis in terms of variables](#411-express-the-discretization-of-the-screw-axis-in-terms-of-variables)
-    - [4.1.2. Creating a test case](#412-creating-a-test-case)
-  - [4.2. No Coulomb friction (conventional model)](#42-no-coulomb-friction-conventional-model)
-    - [4.2.1. Formulation of nonlinear simultaneous equations](#421-formulation-of-nonlinear-simultaneous-equations)
-    - [4.2.2. Comparison with Bo-Lin model (if possible)](#422-comparison-with-bo-lin-model-if-possible)
-  - [4.3. With Coulomb friction](#43-with-coulomb-friction)
-    - [4.3.1. Formulation of nonlinear simultaneous equations](#431-formulation-of-nonlinear-simultaneous-equations)
-
-<!-- /code_chunk_output -->
 
 
 ## 1. Discretize of beam elements
 Improving Timoshenko's Model Represented by Euler Angles.
 
-![1-1](/1_Discretize_of_beam_elements/1_2014.png)
+![1-1](/_1_Discretize_of_beam_elements/1_2014.png)
 
-[Click here](1_Discretize_of_beam_elements/index.md) for more info.
+[Click here](_1_Discretize_of_beam_elements/index.md) for more info.
 
 ### 1.1. Representation using quaternions
 Since NSK uses quaternions to handle posture, we will model the quaternion representation in this program as well. Although there is an idea to convert Euler angles and quaternions for each calculation, we will use the direct quaternion method this time because it seems to be computationally expensive and there are already previous studies.
@@ -74,7 +42,7 @@ Place the beam element at an arbitrary position on the inertial coordinate syste
 
 ## 2. Discretize of Screw Shaft
   
-![Image2](/2_Discretize_of_Screw_Shaft/Picture2.svg)
+![Image2](/_2_Discretize_of_Screw_Shaft/Picture2.svg)
 
 
 ### 2.1. Not only the coordinates of the nodes, but also the profiles along the way
@@ -103,10 +71,10 @@ Actually, this part was not fully verified. The position on the right angle sect
 Similar to the above method, we will now verify the model with a stretched and bent beam model.
 
 
-## 3. The force acting between the ball and the screw shaft including Coulomb friction (in the case of only one ball)
+## 3. Friction between ball and spiral
 With the current progress of NSK, friction can only be taken into account in dynamic analysis, so static load balancing cannot be obtained and is not suitable to be combined with the current beam model. In addition, users in the company have complained about the calculation speed and convergence judgment. Therefore, the first step is to formulate the balance including the Coulomb friction.
 
-![3-1](/3_Friction_between_ball_and_spiral/Picture5.svg)
+![3-1](/_3_Friction_between_ball_and_spiral/Picture5.svg)
 
 ### 3.1. What kind of balance is established in the steady state of Coulomb friction?
 When the ball is in a steady state, the force and torque of the ball should be zero (strictly speaking, there are centrifugal force and gyroscopic moment, but their effects are small and should be ignored), but it is very difficult to find the force balance because of the complexity of the spiral shape. By looking at the state of each contact point in the dynamic analysis in detail, we can understand what is happening.

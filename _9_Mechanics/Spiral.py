@@ -71,14 +71,14 @@ class Spiral:
 
         eta = np.zeros(3)
         eta[0] = t
-        eta[1] = self.R * np.cos(a)
-        eta[2] = self.R * np.sin(a)
+        eta[1] = self.R * np.cos(a) + self.eta[0]
+        eta[2] = self.R * np.sin(a) + self.eta[1]
 
         return self.to_xyz(eta)
 
     def get_mesh(self, th, alp):
 
-        xyz = np.zeros(np.concatenate([th.shape, alp.shape, np.array([3])]))
+        xyz = np.zeros(np.array([th.shape[0], alp.shape[0], 3]))
 
         for idt, t in enumerate(th):
             for ida, a in enumerate(alp):

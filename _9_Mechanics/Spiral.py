@@ -61,12 +61,6 @@ class Spiral:
             ])
         return xyz2eta;
     
-    def get_contact(self, xyz, R, i):
-        eta = self.to_eta2(xyz)[1:]
-        eF  = eta - self.eta[i, :]
-        print(eF)
-        return 0
-
     def get_surface(self, t, a, i):
 
         eta = np.zeros(3)
@@ -85,3 +79,20 @@ class Spiral:
                 xyz[idt, ida, :] = self.get_surface(t, a, i)
 
         return xyz
+    
+    def get_rho(self, cos_alp, i):
+        
+        R = self.nd * self.nd / self.r - self.eta[i, 0]
+        r_inv = 1.0 / self.R[i]
+        
+        return np.array([cos_alp / (R - self.R[i] * cos_alp), -r_inv])
+        
+    def get_contact(self, xyz, R, i):
+        eta = self.to_eta2(xyz)[1:]
+        eF  = eta - self.eta[i, :]
+        print(eF)
+        return 0
+
+
+  
+        

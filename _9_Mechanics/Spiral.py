@@ -88,10 +88,15 @@ class Spiral:
         return np.array([cos_alp / (R - self.R[i] * cos_alp), -r_inv])
         
     def get_contact(self, xyz, R, i):
-        eta = self.to_eta2(xyz)[1:]
-        eF  = eta - self.eta[i, :]
-        print(eF)
-        return 0
+        eta = self.to_eta2(xyz)
+        F  = eta[1:] - self.eta[i, :]
+        norm_F = np.linalg.norm(F)
+        eF = F / norm_F
+        dx = norm_F - self.R[i] + R
+        xyz2eta = self.get_xyz2eta(eta[0])
+        exyz = xyz2eta.T @ np.array([0.0, eF[0], eF[1]])
+        return eF, dx, exyz
+
 
 
   

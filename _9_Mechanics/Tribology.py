@@ -48,7 +48,13 @@ class Tribology():
         b = k_el * a
         
         return k, a, b
-
+    
+    def Tsuji(self,k,zeta,m,v,x):
+        c = 2 * zeta * np.sqrt(1.5 * m * k)
+        Fn = k * np.power(x, 1.5) + c * v * np.power(x, 0.25)
+        return np.max([Fn, 1e-20])
+    
+    
 '''
 
     def Houpert(Rx,a,b,w,E,um,eta,alpha,beta,k):

@@ -16,7 +16,7 @@ Improving Timoshenko's Model Represented by Euler Angles.
 
 ![1-1](/_1_Discretize_of_beam_elements/1_2014.png)
 
-[Click here](_1_Discretize_of_beam_elements/index.md) for more info.
+[Show more](_1_Discretize_of_beam_elements/index.md)
 
 ### 1.1. Representation using quaternions
 Since NSK uses quaternions to handle posture, we will model the quaternion representation in this program as well. Although there is an idea to convert Euler angles and quaternions for each calculation, we will use the direct quaternion method this time because it seems to be computationally expensive and there are already previous studies.
@@ -76,7 +76,9 @@ With the current progress of NSK, friction can only be taken into account in dyn
 
 ![3-1](/_3_Friction_between_ball_and_spiral/Picture5.svg)
 
-### 3.1. a
+### 3.1. Contact with Spiral Torus
+
+[Show more](_3_Friction_between_ball_and_spiral/_3_1_Contact_with_Spiral_Torus/index.html)
 
 
 ### 3.2. What kind of balance is established in the steady state of Coulomb friction?

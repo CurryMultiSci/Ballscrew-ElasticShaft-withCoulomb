@@ -76,10 +76,13 @@ With the current progress of NSK, friction can only be taken into account in dyn
 
 ![3-1](/_3_Friction_between_ball_and_spiral/Picture5.svg)
 
-### 3.1. What kind of balance is established in the steady state of Coulomb friction?
+### 3.1. a
+
+
+### 3.2. What kind of balance is established in the steady state of Coulomb friction?
 When the ball is in a steady state, the force and torque of the ball should be zero (strictly speaking, there are centrifugal force and gyroscopic moment, but their effects are small and should be ignored), but it is very difficult to find the force balance because of the complexity of the spiral shape. By looking at the state of each contact point in the dynamic analysis in detail, we can understand what is happening.
 
-### 3.2. Formulation of nonlinear simultaneous equations
+### 3.3. Formulation of nonlinear simultaneous equations
 If the mechanism of Coulomb friction force generation is known, it can be formulated, so a simultaneous equation can be formulated and solved by a nonlinear solver. To check if the calculation is correct, the steady state of the dynamic analysis and the position are matched.
 
 

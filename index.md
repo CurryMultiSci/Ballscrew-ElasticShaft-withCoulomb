@@ -5,12 +5,6 @@ The theme, which will be completed in about six months, combines NSK's knowledge
 ![intro Image 0](/_0_intro/overview.svg)
 
 
-# Containts
-
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=4 orderedList=false} -->
-
-
-
 ## 1. Discretize of beam elements
 Improving Timoshenko's Model Represented by Euler Angles.
 
@@ -78,10 +72,10 @@ With the current progress of NSK, friction can only be taken into account in dyn
 
 ### 3.1. Contact with Spiral Torus
 
-[Show more](_3_Friction_between_ball_and_spiral/_3_1_Contact_with_Spiral_Torus/index.html)
+[Show more](_3_Friction_between_ball_and_spiral/_3_1_Contact_with_Spiral_Torus/index.ipynb)
 
 
-### 3.2. What kind of balance is established in the steady state of Coulomb friction?
+### 3.2. Friction Distribution between twisted Spiral Torus
 When the ball is in a steady state, the force and torque of the ball should be zero (strictly speaking, there are centrifugal force and gyroscopic moment, but their effects are small and should be ignored), but it is very difficult to find the force balance because of the complexity of the spiral shape. By looking at the state of each contact point in the dynamic analysis in detail, we can understand what is happening.
 
 ### 3.3. Formulation of nonlinear simultaneous equations

@@ -54,7 +54,11 @@ class Tribology():
         Fn = k * np.power(x, 1.5) + c * v * np.power(x, 0.25)
         return np.max([Fn, 1e-20])
     
-    
+    def surface_velocity(self, x0, p0, v0, w0):
+        r = p0 - x0
+        rw = np.cross(w0, r)
+        return rw + v0
+
 '''
 
     def Houpert(Rx,a,b,w,E,um,eta,alpha,beta,k):

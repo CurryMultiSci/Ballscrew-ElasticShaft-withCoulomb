@@ -58,7 +58,12 @@ class Tribology():
         r = p0 - x0
         rw = np.cross(w0, r)
         return rw + v0
+    
+    def calc_Torque(self, x0, p0, F0):
+        r = p0 - x0
+        return - np.cross(F0, r)
 
+    
 '''
 
     def Houpert(Rx,a,b,w,E,um,eta,alpha,beta,k):

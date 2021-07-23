@@ -78,7 +78,7 @@ With the current progress of NSK, friction can only be taken into account in dyn
 ### 3.2. Friction Distribution between twisted Spiral Torus
 When the ball is in a steady state, the force and torque of the ball should be zero (strictly speaking, there are centrifugal force and gyroscopic moment, but their effects are small and should be ignored), but it is very difficult to find the force balance because of the complexity of the spiral shape. By looking at the state of each contact point in the dynamic analysis in detail, we can understand what is happening.
 
-### 3.3. Formulation of nonlinear simultaneous equations
+### 3.3. Find Balance of Friction with Static Analysis
 If the mechanism of Coulomb friction force generation is known, it can be formulated, so a simultaneous equation can be formulated and solved by a nonlinear solver. To check if the calculation is correct, the steady state of the dynamic analysis and the position are matched.
 
 

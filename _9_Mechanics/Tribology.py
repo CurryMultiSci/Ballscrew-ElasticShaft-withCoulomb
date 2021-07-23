@@ -63,6 +63,10 @@ class Tribology():
         r = p0 - x0
         return - np.cross(F0, r)
 
+    def Parabola(self, chi1, chi2, dx):
+        c1 = 2 * (chi1 - chi2) * (chi1 + chi2 - chi1 * chi2 * dx)
+        c2 = (chi1 * dx - 2) * (chi2 * dx - 2) * (2 * chi1 + 2 * chi2 - chi1 * chi2 * dx)
+        return c1 / c2
     
 '''
 
